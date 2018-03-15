@@ -1,0 +1,11 @@
+      <li>
+        <button id="acc-fillter-btn" class=" btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{chosenAdaccountName}}
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <input class="form-control" id="adsAccountDropdown" type="text" placeholder="Search.." onkeyup="accountFilterFunction()">
+          <ul id="adAccountList">
+            <li *ngFor = "let adccount of accountList" (click)="getChosenAccount(adccount.id)"><a href="/adAccounts/{{adccount.id}}/campaigns">{{adccount.fbName}}</a></li>
+          </ul>
+        </ul>
+      </li>
